@@ -20,3 +20,29 @@ def isPalindrome(n):
 			palindrome = False
 
 	return palindrome
+
+def isPythagoreanTriplet(x,y,z):
+	if x < y < z:
+		if x ** 2 + y ** 2 == z ** 2:
+			return True
+	return False
+
+def max(lhs, rhs):
+	if lhs > rhs:
+		return lhs
+	else:
+		return rhs
+
+def divisorCount(n):
+	limit = n
+	numberOfDivisors = 1
+
+	for i in range(1, limit):
+		if(n % i == 0):
+			limit = n / i
+			if n == i:
+				numberOfDivisors = numberOfDivisors + 1
+			else:
+				numberOfDivisors = numberOfDivisors + 2
+
+	return numberOfDivisors
