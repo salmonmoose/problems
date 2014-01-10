@@ -33,16 +33,23 @@ def max(lhs, rhs):
 	else:
 		return rhs
 
+def sumOfDigits(n):
+	list_of_ints = [int(i) for i in str(n)]
+
+	sum_of_ints = 0
+
+	for i in range(0, len(list_of_ints)):
+		sum_of_ints = sum_of_ints + list_of_ints[i]
+
+	return sum_of_ints
+
+
 def divisorCount(n):
 	limit = n
 	numberOfDivisors = 1
 
 	for i in range(1, limit):
 		if(n % i == 0):
-			limit = n / i
-			if n == i:
-				numberOfDivisors = numberOfDivisors + 1
-			else:
-				numberOfDivisors = numberOfDivisors + 2
+			numberOfDivisors = numberOfDivisors + 1
 
 	return numberOfDivisors
