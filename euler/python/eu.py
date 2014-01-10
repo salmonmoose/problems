@@ -54,6 +54,20 @@ def divisorCount(n):
 
 	return numberOfDivisors
 
+def Fibonacci(n):
+	if n < 2:
+		return n
+	else:
+		return Fibonacci(n-2) + Fibonacci(n-1)
+
+def Fibonacci2(n):
+	a = 1
+	b = 1
+	for i in range(2, n+1):
+		b = a + b
+		a = b - a
+	return b
+
 def intToString(n):
 	list_of_ints = [int(i) for i in str(n)]
 	string = ''
